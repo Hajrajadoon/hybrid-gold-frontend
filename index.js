@@ -1,3 +1,4 @@
+import './index.css';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-yellow-700 flex flex-col items-center justify-center">
