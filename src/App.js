@@ -65,7 +65,9 @@ const ChainBG = () => (
 
 const SectionTitle = ({ icon: Icon, title, subtitle }: { icon: any; title: string; subtitle?: string }) => (
   <div>
-    <h2 className="text-2xl md:text-3xl font-semibold text-[color:var(--ink)] flex items-center gap-2" style={({"--ink": brand.ink} as React.CSSProperties)}>
+     className="text-2xl md:text-3xl font-semibold text-[color:var(--ink)] flex items-center gap-2"
+  style={{ "--ink": brand.ink } as React.CSSProperties}
+>
       <Icon className="w-6 h-6" color={brand.gold} /> {title}
     </h2>
     {subtitle && <p className="mt-2 text-[color:var(--slate)] max-w-3xl" style={{"--slate": brand.slate} as React.CSSProperties}>{subtitle}</p>}
