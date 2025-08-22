@@ -1,14 +1,79 @@
 .app {
-  text-align: center;
-  padding: 50px;
   font-family: Arial, sans-serif;
-}
-
-h1 {
-  color: goldenrod;
-}
-
-p {
-  font-size: 18px;
   color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ffd700, #b8860b);
+  color: white;
+  padding: 80px 20px;
+  border-radius: 0 0 40px 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 25px;
+  background: white;
+  color: #b8860b;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Features Section */
+.features {
+  padding: 60px 20px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff8dc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+}
+
+.feature-card h3 {
+  color: #b8860b;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #f5f5f5;
+  color: #666;
+  font-size: 0.9rem;
 }
