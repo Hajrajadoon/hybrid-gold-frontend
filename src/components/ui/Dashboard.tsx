@@ -1,16 +1,55 @@
-import { Tabs } from "./components/ui/tabs";
+import React, { useState } from "react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
+import { Input } from "../components/ui/input";
+import { Progress } from "../components/ui/progress";
 
 export default function Dashboard() {
-  const tabData = [
-    { label: "📊 Charts", content: <p>Chart goes here</p> },
-    { label: "💰 Wallet", content: <p>Wallet details go here</p> },
-    { label: "⚡ Transactions", content: <p>Transaction history</p> },
-  ];
+  const [activeTab, setActiveTab] = useState("tab1");
+
+  const tabs = {
+    tab1: { title: "Tab 1", content: <p>Content for Tab 1</p> },
+    tab2: { title: "Tab 2", content: <p>Content for Tab 2</p> },
+  };
 
   return (
-    <div className="p-6">
+    <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
-      <Tabs tabs={tabData} />
+
+      {/* Tabs */}
+      <Tabs>
+        <TabsList>
+          {Object.keys(tabs).map((tabKey) => (
+            <TabsTrigger key={tabKey} value={tabKey} onClick={() => setActiveTab(tabKey)}>
+              {tabs[tabKey].title}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+
+        {Object.keys(tabs).map((tabKey) => (
+          <TabsContent key={tabKey} value={tabKey}>
+            {tabs[tabKey].content}
+          </TabsContent>
+        ))}
+      </Tabs>
+
+      {/* Example Card */}
+      <Card className="mt-4">
+        <CardHeader>
+          <CardTitle>Example Card</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>Card content goes here.</p>
+          <Badge>New</Badge>
+          <Progress value={50} />
+          <Input placeholder="Type something..." />
+        </CardContent>
+        <CardFooter>
+          <Button>Submit</Button>
+        </CardFooter>
+      </Card>
     </div>
   );
 }
