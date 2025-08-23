@@ -1,12 +1,6 @@
 import React from "react";
 
-export function Button({ children, onClick, className = "" }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-4 py-2 rounded-xl bg-yellow-600 text-white font-semibold shadow-md hover:scale-105 transition ${className}`}
-    >
-      {children}
-    </button>
-  );
-}
+export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "outline" }> = ({ children, variant, ...props }) => {
+  const className = variant === "outline" ? "border px-3 py-1 rounded" : "px-3 py-1 rounded";
+  return <button {...props} className={className}>{children}</button>;
+};
