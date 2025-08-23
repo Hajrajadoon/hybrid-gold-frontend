@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./components/ui/card";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/ui/tabs";
+import { Input } from "./components/ui/input";
+import { Badge } from "./components/ui/badge";
+import { Progress } from "./components/ui/progress";
 import { PieChart, Pie, Cell, ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { ShieldCheck, Vault, Coins, Wallet, Link2, Globe2, Activity, LockKeyhole, Cpu, Network, Scale, CheckCircle2 } from "lucide-react";
 
