@@ -1,6 +1,16 @@
 import React from "react";
 
-export const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "outline" }> = ({ children, variant, ...props }) => {
-  const className = variant === "outline" ? "border px-3 py-1 rounded" : "px-3 py-1 rounded";
-  return <button {...props} className={className}>{children}</button>;
-};
+interface ButtonProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+}
+
+export const Button: React.FC<ButtonProps> = ({ children, onClick, className = "" }) => (
+  <button
+    onClick={onClick}
+    className={`px-4 py-2 rounded-xl bg-yellow-600 text-white font-semibold shadow-md hover:scale-105 transition ${className}`}
+  >
+    {children}
+  </button>
+);
