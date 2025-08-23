@@ -12,9 +12,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "tailwindcss": "3.3.2",
-    "lucide-react": "^0.468.0",
+    "tailwindcss": "^3.3.2",
     "framer-motion": "^10.12.16",
-    "recharts": "^2.7.2"
+    "recharts": "^2.6.2",
+    "lucide-react": "^0.468.0"
   }
 }
