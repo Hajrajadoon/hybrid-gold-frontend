@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { Badge } from "../components/ui/badge";
-import { Input } from "../components/ui/input";
-import { Progress } from "../components/ui/progress";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./card";
+import { Button } from "./button";
+import { Badge } from "./badge";
+import { Input } from "./input";
+import { Progress } from "./progress";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -22,7 +22,11 @@ export default function Dashboard() {
       <Tabs>
         <TabsList>
           {Object.keys(tabs).map((tabKey) => (
-            <TabsTrigger key={tabKey} value={tabKey} onClick={() => setActiveTab(tabKey)}>
+            <TabsTrigger
+              key={tabKey}
+              value={tabKey}
+              onClick={() => setActiveTab(tabKey)}
+            >
               {tabs[tabKey].title}
             </TabsTrigger>
           ))}
