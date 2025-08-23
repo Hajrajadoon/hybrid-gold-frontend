@@ -1,7 +1,12 @@
 import React from "react";
 
-export const Progress: React.FC<{ value?: number; className?: string }> = ({ value = 0, className }) => (
-  <div className={`bg-gray-200 rounded ${className}`} style={{ width: "100%", height: "10px" }}>
-    <div className="bg-yellow-500 h-full rounded" style={{ width: `${value}%` }} />
+interface ProgressProps {
+  value: number;
+  className?: string;
+}
+
+export const Progress: React.FC<ProgressProps> = ({ value, className }) => (
+  <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
+    <div className="bg-yellow-600 h-2 rounded-full" style={{ width: `${value}%` }} />
   </div>
 );
