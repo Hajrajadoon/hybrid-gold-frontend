@@ -2,10 +2,10 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // all your source files
-    "./public/index.html"
+    "./public/index.html",         // your HTML file
   ],
   theme: {
-    extend: {}, // add custom colors/fonts if needed
+    extend: {}, // you can add custom theme settings here
   },
-  plugins: [],
+  plugins: [], // no extra plugins needed for now
 };
