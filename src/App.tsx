@@ -14,13 +14,3 @@ export default function App() {
     </div>
   );
 }
-4. Steps to deploy on Netlify
-
-
-
-
-
-
-
-Ask ChatGPT
-
