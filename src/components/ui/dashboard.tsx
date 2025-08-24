@@ -6,7 +6,7 @@ import { Badge } from "./badge";
 import { Input } from "./input";
 import { Progress } from "./progress";
 
-export default function Dashboard() {
+export default function dashboard() {
   const [activeTab, setActiveTab] = useState("tab1");
 
   const tabs = {
@@ -16,7 +16,7 @@ export default function Dashboard() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-4">dashboard</h1>
 
       {/* Tabs */}
       <Tabs>
