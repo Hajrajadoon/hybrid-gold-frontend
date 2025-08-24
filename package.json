@@ -23,7 +23,7 @@
     "@types/react-dom": "^18.2.7"
   },
   "engines": {
-    "node": "18.19.x",
-    "npm": "9.x"
+     "node": "18.19.x",
+  "npm": ">=9 <11"
   }
 }
