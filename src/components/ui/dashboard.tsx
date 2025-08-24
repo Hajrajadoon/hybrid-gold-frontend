@@ -6,22 +6,24 @@ import { Badge } from "./badge";
 import { Input } from "./input";
 import { Progress } from "./progress";
 
-export default function dashboard() {
-  const [activeTab, setActiveTab] = useState("tab1");
+type TabKey = "tab1" | "tab2";
 
-  const tabs = {
-    tab1: { title: "Tab 1", content: <p>Content for Tab 1</p> },
-    tab2: { title: "Tab 2", content: <p>Content for Tab 2</p> },
-  };
+const tabs: Record<TabKey, { title: string; content: JSX.Element }> = {
+  tab1: { title: "Tab 1", content: <p>Content for Tab 1</p> },
+  tab2: { title: "Tab 2", content: <p>Content for Tab 2</p> },
+};
+
+export default function Dashboard() {
+  const [activeTab, setActiveTab] = useState<TabKey>("tab1");
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">dashboard</h1>
+      <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
 
       {/* Tabs */}
       <Tabs>
         <TabsList>
-          {Object.keys(tabs).map((tabKey) => (
+          {(Object.keys(tabs) as TabKey[]).map((tabKey) => (
             <TabsTrigger
               key={tabKey}
               value={tabKey}
@@ -32,7 +34,7 @@ export default function dashboard() {
           ))}
         </TabsList>
 
-        {Object.keys(tabs).map((tabKey) => (
+        {(Object.keys(tabs) as TabKey[]).map((tabKey) => (
           <TabsContent key={tabKey} value={tabKey}>
             {tabs[tabKey].content}
           </TabsContent>
